@@ -1,10 +1,6 @@
-box: python:3.5-alpine
+box: marceldiass/statuspage:slim
 build:
   steps:
-    - script:
-      name: create requirements.txt
-      code: echo "statuspage" > requirements.txt
-    - pip-install
     - script:
       name: statuspage update
       code: |
