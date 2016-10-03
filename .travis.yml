@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker pull marceldias/statuspage
+
+script:
+  - docker run --rm -t marceldiass/statuspage update --name=StatusTest --token=$GH_TOKEN
