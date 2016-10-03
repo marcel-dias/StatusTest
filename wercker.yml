@@ -2,7 +2,10 @@ box: marceldiass/statuspage:slim
 build:
   steps:
     - script:
-      name: echo python information
+      name: statuspage update
       code: |
-        echo "python version $(python --version) running"
-        echo "pip version $(pip --version) running"
+        statuspage update --name=StatusTest --token=$GH_TOKEN
+    - script:
+      name: statuspage upgrade
+      code: |
+        statuspage upgrade --name=StatusTest --token=$GH_TOKEN
