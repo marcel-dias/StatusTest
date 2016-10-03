@@ -1,4 +1,4 @@
-box: python:3.5-slim
+box: marceldiass/statuspage:slim
 build:
   steps:
     - script:
