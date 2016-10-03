@@ -5,7 +5,3 @@ build:
       name: statuspage update
       code: |
         statuspage update --name=StatusTest --token=$GH_TOKEN
-    - script:
-      name: statuspage upgrade
-      code: |
-        statuspage upgrade --name=StatusTest --token=$GH_TOKEN
