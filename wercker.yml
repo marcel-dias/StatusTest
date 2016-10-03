@@ -1,0 +1,11 @@
+box: marceldiass/statuspage
+build:
+  steps:
+    - script:
+      name: statuspage update
+      code: |
+        update --name=StatusTest --token=$GH_TOKEN
+    - script:
+      name: statuspage upgrade
+      code: |
+        upgrade --name=StatusTest --token=$GH_TOKEN
