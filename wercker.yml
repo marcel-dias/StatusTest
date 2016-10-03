@@ -1,4 +1,4 @@
-box: marceldiass/statuspage:slim
+box: marceldiass/statuspage
 build:
   steps:
     - script:
