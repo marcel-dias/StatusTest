@@ -8,3 +8,8 @@ before_install:
 
 script:
   - docker run --rm -t marceldiass/statuspage update --name=StatusTest --token=$GH_TOKEN
+
+branches:
+  only:
+  - master
+  - gh-pages
