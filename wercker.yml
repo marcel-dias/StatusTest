@@ -1,7 +1,11 @@
-box: marceldiass/statuspage
+box: python:3.5-alpine
 build:
   steps:
     - script:
+      name: create requirements.txt
+      code: echo "statuspage" > requirements.txt
+    - pip-install
+    - script:
       name: statuspage update
       code: |
-        echo "update --name=StatusTest --token=$GH_TOKEN"
+        statuspage update --name=StatusTest --token=$GH_TOKEN
